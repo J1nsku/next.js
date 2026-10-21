@@ -1,5 +1,5 @@
 const blogs = [
-    { id: 1, title: 'otsikko', author: 'jinca', url: 'https://github.com/J1nsku/next.js', likes: '1000',
+    { id: 1, title: 'otsikko', author: 'jinca', url: 'https://github.com/J1nsku/next.js', likes: '1000'
     }
 ]
 

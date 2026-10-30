@@ -11,7 +11,9 @@ type Blog = {
 }
 
 const BlogList = ({ blogs }: { blogs: Blog[] }) => {
-
+    blogs.sort((a, b) => (
+        b.likes - a.likes
+    ))
     return (
         <div>
             <div>

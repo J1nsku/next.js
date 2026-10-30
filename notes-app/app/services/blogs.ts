@@ -1,10 +1,12 @@
 const blogs = [
     {
-        id: 1, title: 'otsikko', author: 'jinca', url: 'https://github.com/J1nsku/next.js', likes: 999
-    }
+        id: 1, title: 'otsikko', author: 'jinca', url: 'https://github.com/J1nsku/next.js', likes: 1
+    },
+    { id: 2, title: 'otsikko2', author: 'janiella', url: 'https://github.com/Jqnsku/next.js', likes: 3
+    },
 ]
 
-let nextId = 2
+let nextId = 3
 
 export const getBlogs = () => {
     return blogs

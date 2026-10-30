@@ -9,8 +9,8 @@ type Note = {
     important: boolean
 }
 
-const NoteList = ({ notes }: { notes: Note[] }) => {
-    const [showImportant, setShowImportant] = useState(false)
+const NoteList = ({ notes, showImportant, }: { notes: Note[], showImportant: boolean }) => {
+    // const [showImportant, setShowImportant] = useState(false)
 
     const notesToShow = showImportant
         ? notes.filter((note) => note.important)
@@ -18,9 +18,11 @@ const NoteList = ({ notes }: { notes: Note[] }) => {
 
     return (
         <div>
-            <button onClick={() => setShowImportant(!showImportant)}>
-                {showImportant ? "Show all" : "Show important"}
-            </button>
+            <div>
+                <Link href={showImportant ? "/notes" : "/notes?important=true"}>
+                    {showImportant ? "Show all" : "Show important only"}
+                </Link>
+            </div>
             <ul>
                 {notesToShow.map((note) => (
                     <li key={note.id}>

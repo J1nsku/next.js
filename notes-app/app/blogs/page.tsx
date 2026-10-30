@@ -1,11 +1,15 @@
 import { getBlogs } from '../services/blogs'
+import BlogList from './BlogList'
+
+export const instant = false
 
 const Blogs = () => {
     const blogs = getBlogs()
     return (
         <div>
             <h2>Blogs</h2>
-            <ul>
+            <BlogList blogs={blogs} />
+            {/* <ul>
                 {blogs.map(blog => (
                     <li key={blog.id}>
                         <p>
@@ -22,7 +26,7 @@ const Blogs = () => {
                         </p>
                     </li>
                 ))}
-            </ul>
+            </ul> */}
         </div>
     )
 }
